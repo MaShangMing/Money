@@ -4,5 +4,7 @@
 
 export * from './billService'
 export * from './categoryService'
+export * from './importService'
 export * from './loanService'
+export * from './notificationService'
 export * from './subscriptionService'
