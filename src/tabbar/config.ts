@@ -58,7 +58,7 @@ export const customTabbarList: CustomTabBarItem[] = [
     text: '订阅',
     pagePath: 'pages/subscription/index',
     iconType: 'unocss',
-    icon: 'i-carbon-renewal',
+    icon: 'i-carbon-renew',
   },
   {
     text: '我的',
