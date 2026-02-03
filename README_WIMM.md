@@ -122,6 +122,24 @@ pnpm build:mp      # 微信小程序
 pnpm build:app     # App
 ```
 
+### Windows 环境注意事项
+
+如果在 Windows 环境遇到启动问题，请运行修复脚本：
+
+```bash
+# 运行 Windows 环境修复脚本
+pnpm fix-windows
+
+# 清除缓存并重新安装
+rm -rf node_modules
+pnpm install
+
+# 启动项目
+pnpm dev
+```
+
+详细的故障排查指南请查看 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
+
 ## 🔐 隐私说明
 
 1. **数据存储**: 所有账单数据默认存储在设备本地，使用 UniApp Storage API
