@@ -4,10 +4,10 @@ import { tabBar } from './src/tabbar/config'
 export default defineUniPages({
   globalStyle: {
     navigationStyle: 'default',
-    navigationBarTitleText: 'unibest',
-    navigationBarBackgroundColor: '#f8f8f8',
-    navigationBarTextStyle: 'black',
-    backgroundColor: '#FFFFFF',
+    navigationBarTitleText: 'Where is my Money',
+    navigationBarBackgroundColor: '#1a1a2e',
+    navigationBarTextStyle: 'white',
+    backgroundColor: '#0f0f1a',
   },
   easycom: {
     autoscan: true,

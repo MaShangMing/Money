@@ -24,7 +24,7 @@ const {
 export default defineManifestConfig({
   'name': VITE_APP_TITLE,
   'appid': VITE_UNI_APPID,
-  'description': '',
+  'description': 'Where is my Money - 智能记账应用，自动监听收付款，注重隐私保护',
   'versionName': '1.0.0',
   'versionCode': '100',
   'transformPx': false,
@@ -59,20 +59,19 @@ export default defineManifestConfig({
         abiFilters: ['armeabi-v7a', 'arm64-v8a'],
         permissions: [
           '<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>',
-          '<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>',
           '<uses-permission android:name="android.permission.VIBRATE"/>',
-          '<uses-permission android:name="android.permission.READ_LOGS"/>',
           '<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>',
-          '<uses-feature android:name="android.hardware.camera.autofocus"/>',
           '<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>',
-          '<uses-permission android:name="android.permission.CAMERA"/>',
-          '<uses-permission android:name="android.permission.GET_ACCOUNTS"/>',
-          '<uses-permission android:name="android.permission.READ_PHONE_STATE"/>',
-          '<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>',
           '<uses-permission android:name="android.permission.WAKE_LOCK"/>',
-          '<uses-permission android:name="android.permission.FLASHLIGHT"/>',
-          '<uses-feature android:name="android.hardware.camera"/>',
-          '<uses-permission android:name="android.permission.WRITE_SETTINGS"/>',
+          // 通知监听相关权限
+          '<uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"/>',
+          '<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>',
+          // 本地存储权限
+          '<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>',
+          '<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>',
+          // 前台服务权限
+          '<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>',
+          '<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>',
         ],
       },
       /* ios打包配置 */

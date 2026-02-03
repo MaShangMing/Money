@@ -92,8 +92,24 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      /** 主题色，用法如: text-primary */
-      primary: 'var(--wot-color-theme,#0957DE)',
+      /** 主题色 - 深邃紫色 */
+      'primary': 'var(--wimm-color-primary, #6366f1)',
+      /** 次要色 - 青色 */
+      'secondary': 'var(--wimm-color-secondary, #22d3d1)',
+      /** 成功色 - 绿色(收入) */
+      'income': 'var(--wimm-color-income, #10b981)',
+      /** 警告色 - 橙色(支出) */
+      'expense': 'var(--wimm-color-expense, #f59e0b)',
+      /** 危险色 - 红色 */
+      'danger': 'var(--wimm-color-danger, #ef4444)',
+      /** 背景色 - 深色 */
+      'bg-dark': '#0f0f1a',
+      'bg-card': '#1a1a2e',
+      'bg-card-hover': '#252542',
+      /** 文字色 */
+      'text-primary': '#ffffff',
+      'text-secondary': '#a1a1aa',
+      'text-muted': '#71717a',
     },
     fontSize: {
       /** 提供更小号的字体，用法如：text-2xs */

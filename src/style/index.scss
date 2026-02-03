@@ -1,21 +1,131 @@
-// 测试用的 iconfont，可生效
-// @import './iconfont.css';
-
-.test {
-  // 可以通过 @apply 多个样式封装整体样式
-  @apply mt-4 ml-4;
-
-  padding-top: 4px;
-  color: red;
-}
+// Where is my Money - 全局样式
+// 深色简约风格
 
 :root,
 page {
-  // 修改按主题色
-  // --wot-color-theme: #37c2bc;
+  // 主题色 - 深邃紫色
+  --wimm-color-primary: #6366f1;
+  --wimm-color-primary-light: #818cf8;
+  --wimm-color-primary-dark: #4f46e5;
 
-  // 修改按钮背景色
-  // --wot-button-primary-bg-color: green;
+  // 次要色 - 青色
+  --wimm-color-secondary: #22d3d1;
+  --wimm-color-secondary-light: #5eead4;
+
+  // 功能色
+  --wimm-color-income: #10b981; // 收入 - 绿色
+  --wimm-color-expense: #f59e0b; // 支出 - 橙色
+  --wimm-color-danger: #ef4444; // 危险 - 红色
+  --wimm-color-warning: #f59e0b; // 警告 - 橙色
+  --wimm-color-success: #10b981; // 成功 - 绿色
+
+  // 背景色 - 深色渐变
+  --wimm-bg-dark: #0f0f1a;
+  --wimm-bg-card: #1a1a2e;
+  --wimm-bg-card-hover: #252542;
+  --wimm-bg-input: #252542;
+
+  // 文字色
+  --wimm-text-primary: #ffffff;
+  --wimm-text-secondary: #a1a1aa;
+  --wimm-text-muted: #71717a;
+  --wimm-text-disabled: #52525b;
+
+  // 边框色
+  --wimm-border-color: #3f3f5a;
+  --wimm-border-light: #52526b;
+
+  // 阴影
+  --wimm-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --wimm-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --wimm-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+  // 圆角
+  --wimm-radius-sm: 8rpx;
+  --wimm-radius: 16rpx;
+  --wimm-radius-lg: 24rpx;
+  --wimm-radius-xl: 32rpx;
+
+  // wot-ui 主题覆盖
+  --wot-color-theme: var(--wimm-color-primary);
+  --wot-button-primary-bg-color: var(--wimm-color-primary);
+}
+
+// 全局背景
+page {
+  background-color: var(--wimm-bg-dark);
+  color: var(--wimm-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+// 卡片样式
+.wimm-card {
+  background: var(--wimm-bg-card);
+  border-radius: var(--wimm-radius-lg);
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: var(--wimm-shadow);
+
+  &:active {
+    background: var(--wimm-bg-card-hover);
+  }
+}
+
+// 金额样式
+.wimm-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+
+  &--income {
+    color: var(--wimm-color-income);
+  }
+
+  &--expense {
+    color: var(--wimm-color-expense);
+  }
+}
+
+// 图标容器
+.wimm-icon-wrapper {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: var(--wimm-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--wimm-color-primary), var(--wimm-color-primary-dark));
+}
+
+// 分割线
+.wimm-divider {
+  height: 1px;
+  background: var(--wimm-border-color);
+  margin: 24rpx 0;
+}
+
+// 安全提示标签
+.wimm-privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 8rpx 16rpx;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--wimm-radius-sm);
+  font-size: 24rpx;
+  color: var(--wimm-color-primary-light);
+}
+
+// 渐变背景
+.wimm-gradient-bg {
+  background: linear-gradient(135deg, var(--wimm-bg-card) 0%, var(--wimm-bg-dark) 100%);
+}
+
+// 毛玻璃效果 (仅H5/部分平台支持)
+.wimm-glass {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /*
