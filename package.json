@@ -29,7 +29,7 @@
     "pnpm": ">=9"
   },
   "scripts": {
-    "fix-windows": "node ./scripts/fix-windows.js",
+    "fix-windows": "node ./scripts/fix-windows.cjs",
     "openapi": "openapi-ts",
     "init-husky": "git init && husky",
     "init-baseFiles": "node ./scripts/create-base-files.js",
