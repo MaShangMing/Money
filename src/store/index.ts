@@ -15,6 +15,13 @@ setActivePinia(store)
 
 export default store
 
+// Where is my Money 核心模块
+export * from './bill'
+export * from './category'
+
+export * from './loan'
+export * from './settings'
+export * from './subscription'
 // 模块统一导出
 export * from './token'
 export * from './user'

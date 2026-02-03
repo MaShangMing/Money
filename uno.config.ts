@@ -72,12 +72,62 @@ export default defineConfig({
       center: 'flex justify-center items-center',
     },
   ],
-  // 动态图标需要在这里配置，或者写在vue页面中注释掉
+  // 动态图标需要在这里配置
+  // Where is my Money - 所需图标
   safelist: [
-    'i-carbon-code',
+    // Tabbar图标
     'i-carbon-home',
+    'i-carbon-chart-pie',
+    'i-carbon-add-large',
+    'i-carbon-renew',
     'i-carbon-user',
-    ' i-carbon-ibm-watson-language-translator',
+    // 分类图标
+    'i-carbon-restaurant',
+    'i-carbon-car',
+    'i-carbon-shopping-cart',
+    'i-carbon-game-console',
+    'i-carbon-phone',
+    'i-carbon-hospital',
+    'i-carbon-education',
+    'i-carbon-tag',
+    'i-carbon-favorite',
+    'i-carbon-group',
+    'i-carbon-favorite-filled',
+    'i-carbon-laptop',
+    'i-carbon-money',
+    'i-carbon-arrows-horizontal',
+    'i-carbon-overflow-menu-horizontal',
+    'i-carbon-wallet',
+    'i-carbon-trophy',
+    'i-carbon-gift',
+    'i-carbon-chart-line',
+    'i-carbon-undo',
+    'i-carbon-time',
+    // 功能图标
+    'i-carbon-add',
+    'i-carbon-close',
+    'i-carbon-chevron-right',
+    'i-carbon-chevron-left',
+    'i-carbon-chevron-down',
+    'i-carbon-chevron-up',
+    'i-carbon-settings',
+    'i-carbon-locked',
+    'i-carbon-view',
+    'i-carbon-view-off',
+    'i-carbon-cloud',
+    'i-carbon-cloud-upload',
+    'i-carbon-cloud-download',
+    'i-carbon-document-import',
+    'i-carbon-document-export',
+    'i-carbon-notification',
+    'i-carbon-warning',
+    'i-carbon-checkmark',
+    'i-carbon-calendar',
+    'i-carbon-filter',
+    'i-carbon-search',
+    'i-carbon-trash-can',
+    'i-carbon-edit',
+    'i-carbon-information',
   ],
   rules: [
     [
@@ -92,8 +142,24 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      /** 主题色，用法如: text-primary */
-      primary: 'var(--wot-color-theme,#0957DE)',
+      /** 主题色 - 深邃紫色 */
+      'primary': 'var(--wimm-color-primary, #6366f1)',
+      /** 次要色 - 青色 */
+      'secondary': 'var(--wimm-color-secondary, #22d3d1)',
+      /** 成功色 - 绿色(收入) */
+      'income': 'var(--wimm-color-income, #10b981)',
+      /** 警告色 - 橙色(支出) */
+      'expense': 'var(--wimm-color-expense, #f59e0b)',
+      /** 危险色 - 红色 */
+      'danger': 'var(--wimm-color-danger, #ef4444)',
+      /** 背景色 - 深色 */
+      'bg-dark': '#0f0f1a',
+      'bg-card': '#1a1a2e',
+      'bg-card-hover': '#252542',
+      /** 文字色 */
+      'text-primary': '#ffffff',
+      'text-secondary': '#a1a1aa',
+      'text-muted': '#71717a',
     },
     fontSize: {
       /** 提供更小号的字体，用法如：text-2xs */
